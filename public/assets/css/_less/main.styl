@@ -1,0 +1,426 @@
+@import "~rupture/rupture/index.styl"
+@import "~jeet/stylus/jeet/index.styl"
+
+//jeet edit
+// edit()
+
+// Colour variables
+$primary = #0A3542
+$secondary = #B0A690
+$light-accent = #C6CDC7
+$text-color = rgba(0,0,0, 0.87)
+
+// typography
+body
+  font-family: "exo2", Helvetica, Arial, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  background-color: #fff
+  color: $text-color
+
+// bootstrap container
+rupture.scale = 0 768px 992px 1200px
+.container
+  +below(2)
+    center(750px, 9px)
+  +at(3)
+    center(970px, 11px)
+  +above(4)
+    center(1100px, 15px)
+
+// NAVBAR
+#navbar
+  height: 120px
+  background-image: url("~img/banner.png")
+  background-position: 100% 0%
+  background-size: cover
+  // background-color: $primary
+  box-shadow: 0px 5px 10px #CCC;
+
+.navbar
+  padding: 10px 0
+  height: 100px
+  #img-logo
+    height: 80px
+  .logo
+    span(1/3)
+  .links
+    +below(1)
+      display: none !important
+    span(2/3)
+    text-align: right;
+    font-family: "exo2"
+    font-weight: 500
+    font-style: normal
+    font-size: 1.25em
+    padding-top: 30px
+    a
+      text-decoration: none
+      margin: 0 15px
+      color: white
+      &:hover
+        color: $light-accent
+      &.active
+        color: $secondary
+
+
+// BANNER
+
+#banner
+  height: 500px
+  background-image: url("~img/banner.png")
+  background-position: 100% 0%
+  background-size: cover
+  // background-color: $primary
+  box-shadow: 0px 5px 10px #CCC;
+  .punch-line
+    p
+      padding: 70px 10px
+      font-size: 2.25em
+      +at(3)
+        font-size: 1.75em
+        padding: 70px 10px 60px 10px
+      +below(2)
+        font-size: 1.25em
+        padding: 20px 10px 20px 10px
+      color: #fff
+      font-family: "exo2"
+      font-style: italic
+      font-weight: 500
+      text-align: center
+    i
+      padding: 20px
+    height: 300px
+    +below(1)
+      height: 180px
+  .contact-form
+    text-align: center
+    label
+      font-family: "exo2"
+      color: white
+      margin-right: 12px
+    form
+      display: inline-block
+    .form-group
+      margin-bottom: 8px;
+      margin-left: 5px
+      margin-right: 5px
+    input
+      +below(1)
+        width: 260px
+    button
+      font-family: "exo2"
+      font-style: italic
+      font-weight: 500
+
+.thankyou
+  i
+    color: white
+    font-size: 1.5em
+    margin-right: 8px
+  color: white
+  font-family: "exo2"
+  font-style: italic
+  font-weight: 500
+  font-size: 1.25em
+
+
+// VALUES
+
+#values
+  .heading
+    margin-bottom: 20px
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+  padding: 20px 0
+  text-align: center
+
+.value-card
+  padding: 10px 40px
+  i
+    color: $primary
+    font-size: 30px
+    vertical-align: middle
+  span.value
+    margin-left: 10px
+    vertical-align: middle
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    font-size: 1.25em
+
+  +above(4)
+    span(1/4)
+  +at(3)
+    span(1/2)
+  +below(2)
+    stack()
+  p
+    margin-top: 0.67em
+    text-align: center
+
+// SERVICES
+#services
+  .head-info
+    text-align: center
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+  padding: 20px 0
+  background-color: $light-accent
+
+.services-card
+  margin-bottom: 15px
+  span(1)
+
+.services-pic
+  padding: 40px 40px
+  p
+    text-align: center
+  i
+    font-size: 100px
+    color: $primary
+  +above(3)
+    span(1/2)
+  +below(2)
+    display: none !important
+    stack()
+
+.services-desc
+  padding: 10px 40px
+  h3
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    margin-bottom: 8px
+    font-size: 1.25em
+  +above(3)
+    span(1/2)
+  +below(2)
+    stack()
+
+
+// OBJECTIVES
+
+#objectives
+  padding: 20px 0
+  .head-info
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    text-align: center
+
+
+.objective-card
+  padding: 10px 40px
+  h3
+    margin-bottom: 8px
+    font-size: 1.25em
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+  +above(3)
+    span(1/2)
+  +below(2)
+    stack()
+
+
+
+// FOOTER FORM
+#footer-form
+  padding: 20px 0
+  background-image: url("~img/banner.png")
+  background-position: 100% 0%
+  background-size: cover
+  // background-color: $primary
+  box-shadow: 0px -5px 10px #CCC;
+  .head-info
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    text-align: center
+    color: white
+    margin-bottom: 20px
+  .form-group
+    margin-bottom: 10px
+    width: 350px
+    +below(2)
+      width: 260px
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  button
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+.footer-form-div
+  text-align: center
+  color: #fff
+
+// .footer-form-col
+//   padding: 0px 25px
+
+
+// FOOTER-NAV
+#footer-nav
+  background-color: #212121
+  .links
+    padding-top: 15px
+    text-align: center
+    a
+      font-family: "exo2"
+      font-style: italic
+      font-weight: 500
+      text-decoration: none
+      color: #fff
+      font-size: 1.25em
+    a:hover
+      color: $light-accent
+
+  +above(2)
+    .links
+      display: none !important
+
+
+// FOOTER
+#footer
+  height: 60px
+
+  p
+    text-align: center
+    margin-top: 20px
+  a
+    text-decoration: none
+    color: $secondary
+  a:hover
+    color: $light-accent
+
+  background-color: #212121
+  color: #fff
+  h1
+    float: left
+
+#contact-form
+  button
+    font-size: 1.25em
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    background-color: $primary
+    color: #fff
+    padding: 10px
+    margin: 20px 0px
+    float: right
+
+
+//TEAM
+#team
+  h1, h2, h3
+    text-align: center
+    padding: 0px 20px
+  h1
+    font-family: "exo2"
+    font-style: italic
+    font-weight: 500
+    margin: 20px 0px 10px 0px
+  h2
+    font-size: 1.5em
+    margin: 15px 0px 15px 0px
+  h3
+    font-style: italic
+    font-size: 1.1em
+    margin-top: 10px
+  p
+    padding: 0 20px
+
+  .top-header
+    padding-top: 20px
+
+#img-danielle
+  display: block
+  margin: auto
+
+
+.pic-box
+  padding: 20px
+  +above(3)
+    column(1/3)
+  +below(2)
+    stack()
+
+.profile-box
+  padding: 20px 0px
+  +above(3)
+    column(2/3)
+  +below(2)
+    stack()
+    padding-top: 0px
+
+#privacy
+  .container
+    padding: 20px
+  span
+    font-style: italic
+
+
+// OLD
+
+
+
+
+
+#contact-form #org-directors
+  text-align: center
+
+
+// .d-text
+//   text-align: left
+
+// .director
+//   margin-bottom: 3px
+
+.box
+  +above(4)
+    column(1/2, cycle: 2)
+  +below(2)
+    stack()
+  +at(3)
+    stack()
+  p
+    margin-top: 0.67em
+    text-align: left
+
+// .pic-box
+//   +above(3)
+//     column(1/4)
+//   +below(2)
+//     stack()
+
+
+
+// .profile-box > p
+//   vertical-align: middle
+//   text-align: left
+
+// .modal-content
+//   background-color: #AFA590
+//   color: #000
+
+
+// .qualifications
+//   color: purple
+//   font-style: italic
+
+
+// .construction
+//   text-align: center
+//   font-size: 30px
+
+
+

@@ -1,0 +1,7 @@
+.navbar
+  .logo
+    a(href="/")
+      img#img-logo
+  .links
+    a(href="/" class="#{ current.path[0] == 'index' ? 'active' : '' }") Home
+    a(href="/team" class="#{ current.path[0] == 'team' ? 'active' : '' }") Our Team

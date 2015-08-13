@@ -1,0 +1,9 @@
+#footer-nav
+  .container
+    .links
+      div: a(href="/" class="#{ current.path[0] == 'index' ? 'active' : '' }") Home
+      div: a(href="/team" class="#{ current.path[0] == 'team' ? 'active' : '' }") Our Team
+#footer
+  .container
+    p &copy; Luminise Pty Ltd. 2015&nbsp;|&nbsp;
+      a(href="/privacy") Privacy Policy
