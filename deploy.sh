@@ -3,7 +3,7 @@
 BUCKET="s3://luminise.com.au"
 REGION="ap-southeast-2"
 
-aws s3 sync dist $BUCKET --region $REGION --delete --exclude ".*"
+aws s3 sync dist $BUCKET --region $REGION --delete --exclude "*.DS_Store"
 
 # aws s3 sync dist $BUCKET --region $REGION --delete \
 #   --exclude "*" --include "*.css" --include "*.js" \
