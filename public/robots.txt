@@ -1,3 +1,3 @@
 # don't crawl for now
 User-agent: *
-Disallow: /
+Disallow:
